@@ -30,9 +30,9 @@ const Header = () => {
                             {loggedInUser.email === undefined && <Link className="nav-link btn-info" to="/login">Login</Link>}
                             {loggedInUser.email && <Link className="nav-link" to="/home">{loggedInUser.email}</Link>}
                         </li>
-                        <li className="nav-item mr-2 mt-2">
+                        {/* <li className="nav-item mr-2 mt-2">
                             {loggedInUser.email && <Link className="nav-link" to="/orderList">Order List</Link>}
-                        </li>
+                        </li> */}
                         <li className="nav-item mr-2 mt-2">
                             {loggedInUser.email && <button className="nav-link btn-success text-light fw-bold fs-6 text" onClick={() => setLoggedInUser({})}>Log Out</button>}
                         </li>
