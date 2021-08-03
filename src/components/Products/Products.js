@@ -27,10 +27,11 @@ const Products = ({product}) => {
     }
     return (
         <div className="col-md-4 mt-3">
+            
             <img className="h-75 w-100 rounded" src={product.imageURL} alt=""/>
             <div className="d-flex justify-content-around mt-2 bg-primary pt-2 pb-2 rounded">
-                <h4 className="text-light text-uppercase">Name: {product.name}</h4>
-                <h4 className="text-light">Price: {product.cost}$</h4>
+                <h5 className="text-light text-uppercase">Name: {product.name}</h5>
+                <h5 className="text-light">Price: {product.cost}$</h5>
                 {/* <h3>{product._id}</h3> */}
                 {loggedInUser.name === undefined && <Link className="nav-link btn btn-light text-danger fw-bold fs-5 text" to="/login">Buy</Link>}
                 {loggedInUser.name && <Link className="nav-link btn btn-light text-danger fw-bold fs-5 text" onClick={() => orderInfo(product._id, product.name, product.cost, product.imageURL)}>Add To List</Link>}

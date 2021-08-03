@@ -34,9 +34,12 @@ const Header = () => {
                             {loggedInUser.email && <Link className="nav-link" to="/orderList">Order List</Link>}
                         </li>
                         <li className="nav-item mr-2 mt-2">
-                            {loggedInUser.email && <button className="nav-link btn-info text-light fw-bold fs-6 text" onClick={() => setLoggedInUser({})}>Log Out</button>}
+                            {loggedInUser.email && <button className="nav-link btn-success text-light fw-bold fs-6 text" onClick={() => setLoggedInUser({})}>Log Out</button>}
                         </li>
                     </div>
+                    <div className="d-flex align-items-center justify-content-around mt-2">
+                    {loggedInUser.email && <Link className="nav-link btn btn-success text-danger fw-bold fs-5 text text-light" to="/orderList">Click To See Your Order List</Link>}
+            </div>
                 </div>
             </div>
         </div>
