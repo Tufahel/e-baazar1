@@ -90,19 +90,19 @@ function Login() {
             <div style={{ textAlign: 'center' }}>
                 <form action="" onSubmit={handleSubmit}>
                     <div className="form-group">
-                        {newUser && <input type="text" onBlur={handleBlur} name="name" placeholder="Name" />}
+                        {newUser && <input className="w-25 mb-2" type="text" onBlur={handleBlur} name="name" placeholder="Name" />}
                     </div>
                     <div className="form-group">
-                        <input type="text" onBlur={handleBlur} name="email" placeholder="Email" required />
+                        <input className="w-25 mb-2" type="text" onBlur={handleBlur} name="email" placeholder="Email" required />
                     </div>
                     <div className="form-group">
-                        <input type="password" onBlur={handleBlur} name="password" placeholder="Password" required />
+                        <input className="w-25 mb-2" type="password" onBlur={handleBlur} name="password" placeholder="Password" required />
                     </div>
                     <div className="form-group">
-                        {newUser && <input type="password" onBlur={handleBlur} name="password" placeholder="Confirm Password" required />}
+                        {newUser && <input className="w-25 mb-2" type="password" onBlur={handleBlur} name="password" placeholder="Confirm Password" required />}
                     </div>
                     <div className="form-group">
-                    <input className="btn btn-primary" type="submit" value={newUser ? 'Create an Account' : 'Login'} />
+                    <input className="btn btn-primary w-25 mb-2" type="submit" value={newUser ? 'Create an Account' : 'Login Using Email'} />
                     </div>
                     <div className="form-group justify-content-center align-items-center d-flex">
                     {!newUser && <p className="bg-light w-25 round">Do not have an account? <Link> <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />

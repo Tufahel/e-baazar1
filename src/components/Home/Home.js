@@ -9,17 +9,21 @@ const Home = () => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        fetch('https://still-anchorage-58870.herokuapp.com/products')
-        .then(res => res.json())
-        .then(data => setProducts(data))
+        fetch('http://localhost:5055/products')
+            .then(res => res.json())
+            .then(data => setProducts(data))
     }, [])
-    
+
     return (
-        <div className="row">
+        <div className="bg-light mw-100 mh-100">
             <Header></Header>
-            {
-                products.map(product =><Products product={product}></Products>)
-            }
+            <div className="mt-2 row container-fluid">
+
+                {
+                    products.map(product => <Products product={product}></Products>)
+                }
+
+            </div>
         </div>
     );
 };

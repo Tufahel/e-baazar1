@@ -13,7 +13,7 @@ const Header = () => {
                 <div>
                     <div className="nav justify-content-center">
                         <div className="mt-2">
-                        <Link className="nav-link btn btn-light round" to="/home">E Bazar</Link>
+                        <Link className="nav-link btn btn-dark text-light fw-bold fs-4 text" to="/home">E Bazar</Link>
                         </div>
                     </div>
                     <div className="nav justify-content-end">
@@ -34,7 +34,7 @@ const Header = () => {
                             {loggedInUser.email && <Link className="nav-link" to="/orderList">Order List</Link>}
                         </li>
                         <li className="nav-item mr-2 mt-2">
-                            {loggedInUser.email && <button className="nav-link btn-info" onClick={() => setLoggedInUser({})}>Log Out</button>}
+                            {loggedInUser.email && <button className="nav-link btn-info text-light fw-bold fs-6 text" onClick={() => setLoggedInUser({})}>Log Out</button>}
                         </li>
                     </div>
                 </div>
