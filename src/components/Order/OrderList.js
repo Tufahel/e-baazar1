@@ -15,7 +15,7 @@ const OrderList = () => {
     //console.log("data length", datalength);
 
     useEffect(() => {
-        fetch('http://localhost:5055/getOrder')
+        fetch('https://still-anchorage-58870.herokuapp.com/getOrder')
         .then(res => res.json())
         .then(data => {console.log("order ", data);setOrders(data)})
     }, [])
