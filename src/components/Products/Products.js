@@ -14,7 +14,7 @@ const Products = ({product}) => {
             order_price: price,
             order_image: imageURL
         }
-        const url = `http://localhost:5055/orderList`
+        const url = `https://still-anchorage-58870.herokuapp.com/orderList`
         fetch(url, {
             method: 'POST',
             headers: {

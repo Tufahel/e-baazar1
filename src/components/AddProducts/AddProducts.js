@@ -16,7 +16,7 @@ const AddProducts = () => {
             cost: data.price
         };
         //const url = `https://still-anchorage-58870.herokuapp.com/addProducts`;
-        const url = `http://localhost:5055/addProducts`
+        const url = `https://still-anchorage-58870.herokuapp.com/addProducts`
         console.log(productData);
 
         fetch(url, {
